@@ -15,7 +15,7 @@ st.write("""
 ##### Use the form below to get started! 
 """)
 
-penguin_df = pd.read_csv("penguins.csv")
+penguin_df = pd.read_csv("BatuhanYilmaz26/Getting-Started-with-Streamlit-for-Data-Science/Chapter5/streamlit_sharing/penguins.csv/penguins.csv")
 rf_pickle = open("random_forest_penguin.pickle", "rb")
 map_pickle = open("output_penguin.pickle", "rb")
 rfc = pickle.load(rf_pickle)
