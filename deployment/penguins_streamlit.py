@@ -7,7 +7,17 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from PIL import Image
 import pickle
+from streamlit_lottie import st_lottie
+import requests
 
+def load_lottieurl(url: str):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
+
+lottie_penguin = load_lottieurl('https://assets5.lottiefiles.com/private_files/lf30_ttgwkuhd.json')
+st_lottie(lottie_penguin, height=200)
 
 st.write("""
 ## Penguin Classifier
