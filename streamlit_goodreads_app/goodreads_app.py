@@ -30,7 +30,7 @@ Give it a go by uploading your data below!
 
 goodreads_file = st.file_uploader("Please Import Your Goodreads Data")
 if goodreads_file is None:
-    books_df = pd.read_csv("goodreads_history.csv")
+    books_df = pd.read_csv("https://raw.githubusercontent.com/BatuhanYilmaz26/Getting-Started-with-Streamlit-for-Data-Science/main/streamlit_goodreads_app/goodreads_history.csv")
     st.write("Analyzing Batuhan's Goodreads history")
 else:
     books_df = pd.read_csv(goodreads_file)
